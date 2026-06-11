@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DENNISMOORLE – errate das Wort</title>
+<title>DENNISMOORLE – Guess the word!</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
@@ -132,11 +132,11 @@
 <body>
   <header>
     <div>
-      <h1>DENNIS<span>MOORLE</span><span class="num" id="num"></span></h1>
+      <h1>DENNIS<span>MOOR</span>LE<span class="num" id="num"></span></h1>
     </div>
     <div class="actions">
       <button class="btn share" id="share" hidden>SHARE</button>
-      <button class="btn newgame" id="newgame">NEW GAME</button>
+      <!--//<button class="btn newgame" id="newgame">NEW GAME</buttonhtml-->
     </div>
   </header>
 
@@ -168,9 +168,9 @@ const toastEl = document.getElementById("toast");
 const keyEls = {};
 
 const KB = [
-  ["Q","W","E","R","T","Z","U","I","O","P","Ü"],
+  ["Q","W","E","R","T","Z","U","I","O","P","DEL"],
   ["A","S","D","F","G","H","J","K","L","Ö","Ä"],
-  ["ENTER","Y","X","C","V","B","N","M","DEL"]
+  ["D","Y","X","C","V","B","N","M","ENTER"]
 ];
 
 function buildBoard(){
@@ -276,7 +276,7 @@ function submit(){
     if(guess === answer){
       gameOver = true;
       document.getElementById("share").hidden = false;
-      toast(["Glückstreffer!","Stark!","Sauber!","Gut gemacht!","Geschafft!","Puh, gerade noch!"][finished], 2600);
+      toast(["DENNISSS!","Moor davon!","Stinker!","!","Mashallah!"][finished], 2600);
     } else if(row === ROWS-1){
       gameOver = true;
       toast("Das Wort war: " + answer, 4000);
